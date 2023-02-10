@@ -22,7 +22,8 @@ public:
 	        if(mpp.find(x-arr[i])!=mpp.end())
 	        {
 	            auto it = mpp.find(x-arr[i]);
-	            if(it->second>1) return true;
+	            if((x-arr[i])==arr[i] && it->second==1) return false;
+	            else return true;
 	        }
 	        
 	        mpp[arr[i]]++;
