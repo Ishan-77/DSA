@@ -7,7 +7,7 @@ class Solution {
          while(i<s.size() && s[i]== ' ') {
              i++;
          }     
-        s = s.substr(i); //i ---> last of string
+        s = s.substr(i); 
         
         int sign = +1;
         long ans = 0;
