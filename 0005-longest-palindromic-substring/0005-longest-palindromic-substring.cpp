@@ -20,7 +20,7 @@ public:
          }
       
          int length=h-l-1;
-         if(length>=max_length)
+         if(length>max_length)
          {
              st=l+1;
              max_length=length;
