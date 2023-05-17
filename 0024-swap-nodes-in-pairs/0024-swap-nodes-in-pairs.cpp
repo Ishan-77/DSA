@@ -11,7 +11,7 @@
 class Solution {
 public:
 ListNode* swapPairs(ListNode* head) {
-        if(!head || !head->next) return head; //If there are less than 2 nodes in the given nodes, then no need to do anything just return the list as it is.
+        if(!head || !head->next) return head;
 		
         ListNode* dummyNode = new ListNode();
         
