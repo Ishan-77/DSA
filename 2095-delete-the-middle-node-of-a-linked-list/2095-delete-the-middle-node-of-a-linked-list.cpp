@@ -11,23 +11,25 @@
 class Solution {
 public:
     ListNode* deleteMiddle(ListNode* head) {
-        if(head==NULL) return  NULL;
-        if(head->next==NULL)
-            return NULL;
-        ListNode * slow= head;
-        ListNode * prev=NULL;
-        ListNode * fast =  head;
-        while(fast!=NULL && fast->next!=NULL)
-        {   if(prev==NULL)
-            prev=head;
-         else
-            prev=prev->next;
-            fast=fast->next->next;
-            slow=slow->next;
+	  // edge case conditions
+       if (head == NULL) {
+          return NULL;
+       }
+       if (head->next == NULL) {
+          delete head;
+          return NULL;
+       }
+        ListNode* slow = head;
+        ListNode* fast = head;
+        ListNode* prev = head; // keeping this prev node to get the previous node of slow pointer when we reach middle
+        while(fast != NULL && fast->next != NULL)
+        {
+            if(slow != head) prev = prev->next; // since we want prev to start one step later than slow node
+            slow = slow->next;
+            fast = fast->next->next;
         }
-        prev->next=slow->next;
+        prev->next = slow->next;
+        delete slow;
         return head;
-         
-       
     }
 };
