@@ -9,7 +9,7 @@ class Solution {
     vector<int> nextGreaterElement(int n, vector<int>& arr) {
         // code here
         
-        vector<int>ans(n,-1);
+        vector<int>ans(n);
         stack<int>st;
         for(int i= 2*n-1;i>=0;i--)
         {
