@@ -2,7 +2,7 @@ class Solution {
 public:
     string reorganizeString(string s) {
         
-        map<char,int>mpp;
+        unordered_map<char,int>mpp;
         
         for(int i=0;i<s.size();i++)
         {
