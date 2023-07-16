@@ -6,7 +6,7 @@ public:
         double  sum=0;
         for(int i=0;i<piles.size();i++)
         {
-           sum+=ceil(piles[i]/(double)h); 
+           sum+=ceil((double)piles[i]/(double)h); 
         }
         return sum;
     }
