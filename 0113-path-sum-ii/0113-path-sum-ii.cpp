@@ -12,7 +12,7 @@
 class Solution {
 public:
     
-    void helper(TreeNode* root,int targetSum,vector<int>&path,vector<vector<int>>&ans) {
+    void helper(TreeNode* root,int targetSum,vector<int>path,vector<vector<int>>&ans) {
         if(!root) return;
         
         path.push_back(root->val);
@@ -20,6 +20,7 @@ public:
         
         if(!root->left && !root->right && targetSum == root->val) {
             ans.push_back(path);
+            return;
             
         }
         helper(root->left,targetSum-root->val,path,ans);
