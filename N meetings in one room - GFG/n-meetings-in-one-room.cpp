@@ -6,8 +6,6 @@ using namespace std;
 class Solution
 {
     public:
-    //Function to find the maximum number of meetings that can
-    //be performed in a meeting room.
     
     static bool comp(pair<int,int>&a,pair<int,int>&b) {
         // sort by end time 
