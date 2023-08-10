@@ -29,7 +29,7 @@ class Solution {
         vector<int>ans;
         
          int vis[V] = {0};
-         int pathvis [V] = {0};
+         int pathvis[V] = {0};
          int check[V] = {0};
          
          for(int i=0;i<V;i++) {
