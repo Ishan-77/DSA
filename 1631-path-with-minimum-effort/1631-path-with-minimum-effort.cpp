@@ -25,12 +25,14 @@ public:
             int r = it.second.first;
             int c = it.second.second;
             
-            if(r==n-1 && c == m-1) return diff ;
+           
             
             for(int i=0;i<4;i++) {
                 int nr = r+dr[i];
                 int nc = c+dc[i];
                 
+                
+                 if(r==n-1 && c == m-1) return diff ;
                 
                 
                 if(nr>=0 && nc>=0 && nr<n && nc<m) {
@@ -43,6 +45,7 @@ public:
             }
             
         }
+        
         return 0;
         
         
