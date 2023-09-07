@@ -18,7 +18,7 @@ public:
             
         }
         if(p[j]=='*') {
-            return  dp[i][j] = func(i-1,j,s,p,dp) || func(i,j-1,s,p,dp);
+            return  dp[i][j] = func(i-1,j,s,p,dp) | func(i,j-1,s,p,dp);
         }
         return dp[i][j] =  false;
     }
