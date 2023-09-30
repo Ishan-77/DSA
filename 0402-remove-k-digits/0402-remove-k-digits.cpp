@@ -14,7 +14,7 @@ public:
         
         for(int i=0;i<num.size();i++) {
             
-            while(!st.empty() && num[i] < st.top() && k > 0) {
+            while(!st.empty() && num[i] < st.top() && k ) {
                 st.pop();
                 k--;
             } 
@@ -29,7 +29,7 @@ public:
         // 1 1 2 
         
         while(!st.empty() && k) {
-                --k;
+                k--;
                 st.pop();
             }
         
