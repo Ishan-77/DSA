@@ -16,27 +16,25 @@ class Solution
     bool areIsomorphic(string str1, string str2)
     {
         
-        if(str1.size()!= str2.size()) return false;
-        
         // Your code here
-        unordered_map<char,char> m1;
-        unordered_map<char,bool> m2;
-        for(int i=0;i<str1.size();i++)
-        {
-            if(m1.find(str1[i])!=m1.end())
-            {
-                if(m1[str1[i]]!= str2[i]) return false;
+        
+        if(str1.size()!=str2.size()) return false;
+        unordered_map<char,char>mpp;
+        
+        unordered_map<char,bool>mpp2;
+        
+        for(int i=0;i<str1.size();i++) {
+            if(mpp.find(str1[i])!=mpp.end()) {
+                if(mpp[str1[i]]!=str2[i]) return false;
             }
-            else
-            {
-                if(m2[str2[i]]) return false;
-                
-                m1[str1[i]] = str2[i];
-                m2[str2[i]] =  true;
-                
+            else {
+                if(mpp2[str2[i]]) return false;
             }
+            mpp[str1[i]] = str2[i];
+            mpp2[str2[i]] = true;
         }
         return true;
+        
         
     }
 };
