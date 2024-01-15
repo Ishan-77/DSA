@@ -2,7 +2,7 @@ class Solution {
 public:
     vector<vector<int>> findWinners(vector<vector<int>>& matches) {
         
-    vector<vector<int>>ans;
+    //vector<vector<int>>ans;
         
         vector<int>noloss;
         vector<int>oneloss;
@@ -32,8 +32,6 @@ public:
             }
         }
         
-        ans.push_back(noloss);
-        ans.push_back(oneloss);
         
         
         
@@ -42,7 +40,8 @@ public:
         
         
         
-        return ans;
+        
+        return {noloss,oneloss};
         
     }
 };
