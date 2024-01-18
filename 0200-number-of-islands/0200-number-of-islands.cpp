@@ -1,7 +1,5 @@
 class Solution {
-public:
-    
-    
+public: 
     void bfs(int row,int col,vector<vector<char>>&grid,vector<vector<bool>>&vis) {
         
        int n = grid.size();  //row
@@ -17,34 +15,20 @@ public:
        while(!q.empty()) {
            int r = q.front().first;
            int c = q.front().second;
-           
            q.pop();
-           
            
            for(int k=0;k<4;k++) {
                int nr = r+dr[k];
                int nc = c+dc[k];
-               
+             
                if(nr>=0 && nr<n && nc>=0 && nc<m && grid[nr][nc]=='1' && !vis[nr][nc]) {
                    vis[nr][nc]= true;
                    bfs(nr,nc,grid,vis);
                }
-           }
-           
-           
-           
-           
-           
-           
-           
-           
-           
-           
-       }
-        
+           }  
+       }  
     }
     int numIslands(vector<vector<char>>& grid) {
-        
         int n = grid.size(); //row
         int m = grid[0].size();    // col
         
