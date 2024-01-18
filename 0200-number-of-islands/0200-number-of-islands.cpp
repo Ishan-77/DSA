@@ -23,7 +23,7 @@ public:
              
                if(nr>=0 && nr<n && nc>=0 && nc<m && grid[nr][nc]=='1' && !vis[nr][nc]) {
                    vis[nr][nc]= true;
-                   bfs(nr,nc,grid,vis);
+                   q.push({nr,nc});
                }
            }  
        }  
